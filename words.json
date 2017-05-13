@@ -1,0 +1,98 @@
+[
+  // French
+  "beau idéal",
+  "boutonnière",
+  "bric-à-brac",
+  "café",
+  "cause célèbre",
+  "chèvre",
+  "cliché",
+  "comme ci comme ça",
+  "consommé",
+  "coup d’état",
+  "coup de grâce",
+  "crudités",
+  "crème brûlée",
+  "crème de menthe",
+  "crème fraîche",
+  "crêpe",
+  "débutante",
+  "décor",
+  "déjà vu",
+  "dénouement",
+  "façade",
+  "fiancé",
+  "fiancée",
+  "flambé",
+  "garçon",
+  "lycée",
+  "maître d",
+  "ménage à trois",
+  "négligée",
+  "papier-mâché",
+  "protégé",
+  "protégée",
+  "purée",
+
+  "raison d’être",
+  // We can’t use "résumé" because it will match "resume processing"
+  "my résumé",
+  "your résumé",
+  "his résumé",
+  "her résumé",
+  "a résumé",
+  "the résumé",
+  "risqué",
+  "roué",
+  "soirée",
+  "soufflé",
+  "soupçon",
+  "touché",
+  "tête-à-tête",
+  "voilà",
+  "à la carte",
+  "à la mode",
+  "émigré",
+
+  // Spanish
+  "el niño",
+  "jalapeño",
+  "la niña",
+  "piña colada",
+  "señor",
+  "señora",
+  "señorita",
+
+  // Portuguese
+  "açaí",
+
+  // German
+  "doppelgänger",
+  "führer",
+  "gewürztraminer",
+  "übermensch",
+
+  // Latin
+  "vis-à-vis",
+
+  // swedish
+  "filmjölk",
+  "smörgåsbord",
+
+  /* Names, places, and companies */
+  "beyoncé",
+  "brontë",
+  "champs-élysées",
+  "citroën",
+  "curaçao",
+  "häagen-dazs",
+  "löwenbräu",
+  "monégasque",
+  "mötley crüe",
+  "nescafé",
+  "queensrÿche",
+  "québec",
+  "québécois",
+  "ångström",
+  "škoda"
+]
