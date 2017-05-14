@@ -13,9 +13,9 @@ For example:
 * senorita → señorita
 * doppelganger → doppelgänger
 
-(You can customize the rules as you wish.)
+(You can add your own words too.)
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/1p0s3e2p1U1m1r3N2Q41/diacritics.png)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/2U143Z0i3p3G0i1Q0i1D/textlint-rule-diacritics.png)
 
 ## Installation
 
@@ -52,9 +52,9 @@ By default the rule will check against my personal [diacritics](./words.json). Y
 
 Read more about [configuring textlint](https://github.com/textlint/textlint/blob/master/docs/configuring.md).
 
-## Changelog
+## Change log
 
-The changelog can be found on the [Releases page](https://github.com/sapegin/textlint-rule-diacritics/releases).
+The change log can be found on the [Releases page](https://github.com/sapegin/textlint-rule-diacritics/releases).
 
 ## Contributing
 
