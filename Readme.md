@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/sapegin/textlint-rule-diacritics.svg)](https://travis-ci.org/sapegin/textlint-rule-diacritics)
 [![npm](https://img.shields.io/npm/v/textlint-rule-diacritics.svg)](https://www.npmjs.com/package/textlint-rule-diacritics)
 
-[Textlint](https://github.com/textlint/textlint) rule to check correct usage of diacritics.
+[Textlint](https://github.com/textlint/textlint) rule to check and fix the correct usage of diacritics.
 
 For example:
 
@@ -31,7 +31,7 @@ textlint --fix --rule diacritics Readme.md
 
 ## Configuration
 
-By default the rule will check against my personal [diacritics](./words.json). You can change it in your `.textlintrc`:
+You can configure the rule in your `.textlintrc`:
 
 ```js
 {
@@ -50,7 +50,13 @@ By default the rule will check against my personal [diacritics](./words.json). Y
 }
 ```
 
-Read more about [configuring textlint](https://github.com/textlint/textlint/blob/master/docs/configuring.md).
+Check [the default diacritics list](./words.json). Read more about [configuring textlint](https://github.com/textlint/textlint/blob/master/docs/configuring.md).
+
+## Other textlint rules
+
+* [textlint-rule-apostrophe](https://github.com/sapegin/textlint-rule-apostrophe) — correct apostrophe usage
+* [textlint-rule-stop-words](https://github.com/sapegin/textlint-rule-stop-words) — filler words, buzzwords and clichés
+* [textlint-rule-terminology](https://github.com/sapegin/textlint-rule-terminology) — correct terms spelling
 
 ## Change log
 
