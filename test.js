@@ -96,6 +96,9 @@ tester.run('textlint-rule-diacritics', rule, {
 		{
 			text: 'My crêpe is good',
 		},
+		{
+			text: 'I was touched by her feelings.',
+		},
 	],
 	invalid: [
 		{
@@ -118,6 +121,15 @@ tester.run('textlint-rule-diacritics', rule, {
 				},
 				{
 					message: 'Incorrect usage of the word: “doppelgangers”, use “doppelgängers” instead',
+				},
+			],
+		},
+		{
+			text: 'She yelled "touche" as she lunged forward.',
+			output: 'She yelled "touché" as she lunged forward.',
+			errors: [
+				{
+					message: 'Incorrect usage of the word: “touche”, use “touché” instead',
 				},
 			],
 		},
