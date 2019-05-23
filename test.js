@@ -32,10 +32,9 @@ describe('getRegExp', () => {
 		expect(result[1]).toBe('resume');
 	});
 
-	it('should match a pattern in the beginning of a word', () => {
+	it('should not match a pattern only at the beginning of a word', () => {
 		const result = getRegExp(patterns).exec('All resumes are terrible');
-		expect(result).toBeTruthy();
-		expect(result[1]).toBe('resumes');
+		expect(result).toBeFalsy();
 	});
 
 	it('should not match a pattern in the middle of a word', () => {
@@ -68,7 +67,7 @@ describe('getRegExp', () => {
 });
 
 describe('getCorrection', () => {
-	const words = ['crème fraîche', 'crêpe', 'débutante'];
+	const words = ['crème fraîche', 'crêpe', 'crêpes', 'débutante'];
 
 	it('should return a correct word', () => {
 		const result = getCorrection(words, 'crepe');
