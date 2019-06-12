@@ -113,7 +113,7 @@ function getPatterns(words) {
  * @return {RegExp}
  */
 function getRegExp(patterns) {
-	return new RegExp(`(\\b(?:${patterns.join('|')})[\\w-]*\\b)`, 'ig');
+	return new RegExp(`(\\b(?:${patterns.join('|')})\\b)`, 'ig');
 }
 
 /**
@@ -131,7 +131,7 @@ function getCorrection(words, match) {
 			continue;
 		}
 
-		const corrected = match.replace(new RegExp(`\\b${pattern}`, 'i'), word);
+		const corrected = match.replace(new RegExp(`\\b${pattern}\\b`, 'i'), word);
 		return matchCasing(corrected, match);
 	}
 
