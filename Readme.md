@@ -1,17 +1,15 @@
 # textlint-rule-diacritics
 
-[![textlint fixable rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/)
-[![Build Status](https://travis-ci.org/sapegin/textlint-rule-diacritics.svg)](https://travis-ci.org/sapegin/textlint-rule-diacritics)
-[![npm](https://img.shields.io/npm/v/textlint-rule-diacritics.svg)](https://www.npmjs.com/package/textlint-rule-diacritics)
+[![textlint fixable rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) [![Build Status](https://travis-ci.org/sapegin/textlint-rule-diacritics.svg)](https://travis-ci.org/sapegin/textlint-rule-diacritics) [![npm](https://img.shields.io/npm/v/textlint-rule-diacritics.svg)](https://www.npmjs.com/package/textlint-rule-diacritics)
 
 [Textlint](https://github.com/textlint/textlint) rule to check and fix the correct usage of diacritics.
 
 For example:
 
-* creme brulee → crème brûlée
-* deja vu → déjà vu
-* senorita → señorita
-* doppelganger → doppelgänger
+- creme brulee → crème brûlée
+- deja vu → déjà vu
+- senorita → señorita
+- doppelganger → doppelgänger
 
 (You can add your own words too.)
 
@@ -54,9 +52,9 @@ Check [the default diacritics list](./words.json). Read more about [configuring 
 
 ## Other textlint rules
 
-* [textlint-rule-apostrophe](https://github.com/sapegin/textlint-rule-apostrophe) — correct apostrophe usage
-* [textlint-rule-stop-words](https://github.com/sapegin/textlint-rule-stop-words) — filler words, buzzwords and clichés
-* [textlint-rule-terminology](https://github.com/sapegin/textlint-rule-terminology) — correct terms spelling
+- [textlint-rule-apostrophe](https://github.com/sapegin/textlint-rule-apostrophe) — correct apostrophe usage
+- [textlint-rule-stop-words](https://github.com/sapegin/textlint-rule-stop-words) — filler words, buzzwords and clichés
+- [textlint-rule-terminology](https://github.com/sapegin/textlint-rule-terminology) — correct terms spelling
 
 ## Change log
 

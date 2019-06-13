@@ -116,10 +116,12 @@ tester.run('textlint-rule-diacritics', rule, {
 			output: 'My résumé has doppelgängers',
 			errors: [
 				{
-					message: 'Incorrect usage of the word: “My resume”, use “My résumé” instead',
+					message:
+						'Incorrect usage of the word: “My resume”, use “My résumé” instead',
 				},
 				{
-					message: 'Incorrect usage of the word: “doppelgangers”, use “doppelgängers” instead',
+					message:
+						'Incorrect usage of the word: “doppelgangers”, use “doppelgängers” instead',
 				},
 			],
 		},
@@ -128,7 +130,8 @@ tester.run('textlint-rule-diacritics', rule, {
 			output: 'She yelled "touché" as she lunged forward.',
 			errors: [
 				{
-					message: 'Incorrect usage of the word: “touche”, use “touché” instead',
+					message:
+						'Incorrect usage of the word: “touche”, use “touché” instead',
 				},
 			],
 		},

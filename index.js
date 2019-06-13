@@ -6,7 +6,18 @@ const DEFAULT_OPTIONS = {
 	words: [],
 };
 
-const MARK_GROUPS = ["’'", 'àâäåa', 'éèêëe', 'çc', 'îíi', 'ñn', 'öo', 'šs', 'ûüu', 'ÿy'];
+const MARK_GROUPS = [
+	"’'",
+	'àâäåa',
+	'éèêëe',
+	'çc',
+	'îíi',
+	'ñn',
+	'öo',
+	'šs',
+	'ûüu',
+	'ÿy',
+];
 
 function reporter(context, options = {}) {
 	const opts = Object.assign({}, DEFAULT_OPTIONS, options);
@@ -18,7 +29,7 @@ function reporter(context, options = {}) {
 	const { Syntax, RuleError, report, fixer, getSource } = context;
 	return {
 		[Syntax.Str](node) {
-			return new Promise(resolve => {
+			return new Promise((resolve) => {
 				const text = getSource(node);
 
 				let match;
