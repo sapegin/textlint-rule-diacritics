@@ -10,7 +10,7 @@
   "repository": "sapegin/textlint-rule-diacritics",
   "license": "MIT",
   "engines": {
-    "node": ">=8.6"
+    "node": ">=8.9"
   },
   "main": "index.js",
   "files": [
@@ -42,11 +42,11 @@
     "sign"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-tamia": "^6.0.2",
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "textlint-tester": "^5.1.6"
+    "eslint": "^6.8.0",
+    "eslint-config-tamia": "^7.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "textlint-tester": "^5.1.13"
   },
   "dependencies": {
     "match-casing": "^1.0.2",
