@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { createRequire } from 'node:module';
 import stripJsonComments from 'strip-json-comments';
 import { matchCasing } from 'match-casing';
 import type {
@@ -32,8 +33,10 @@ const MARK_GROUPS = [
 /**
  * Load JSON file, strip comments.
  */
-function loadJson(filepath: string) {
-	const json = fs.readFileSync(require.resolve(filepath), 'utf8');
+function loadJson(modulePath: string) {
+	const require = createRequire(import.meta.url);
+	const resolvedModule = require.resolve(modulePath);
+	const json = fs.readFileSync(resolvedModule, 'utf8');
 	return JSON.parse(stripJsonComments(json)) as string[];
 }
 
