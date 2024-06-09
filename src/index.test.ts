@@ -1,8 +1,12 @@
 import { describe, test, expect } from 'vitest';
 import TextLintTester from 'textlint-tester';
-import rule from './index';
+import rule, {
+	getPattern,
+	getPatterns,
+	getRegExp,
+	getCorrection,
+} from './index';
 
-const { getPattern, getPatterns, getRegExp, getCorrection } = rule.test;
 const tester = new TextLintTester();
 
 describe('getPattern', () => {
@@ -29,8 +33,7 @@ describe('getRegExp', () => {
 	const patterns = ['r[éèêëe]sum[éèêëe]', 'd[éèêëe]cor'];
 	test('should match a pattern as a full word', () => {
 		const result = getRegExp(patterns).exec('My resume is good');
-		expect(result).toBeTruthy();
-		expect(result[1]).toBe('resume');
+		expect(result?.[1]).toBe('resume');
 	});
 
 	test('should not match a pattern only at the beginning of a word', () => {
@@ -45,25 +48,21 @@ describe('getRegExp', () => {
 
 	test('should match a pattern if some marks are present', () => {
 		const result = getRegExp(patterns).exec('My résume is good');
-		expect(result).toBeTruthy();
-		expect(result[1]).toBe('résume');
+		expect(result?.[1]).toBe('résume');
 	});
 
 	test('should match a pattern regardless of its case', () => {
 		const result = getRegExp(patterns).exec('Resume is good');
-		expect(result).toBeTruthy();
-		expect(result[1]).toBe('Resume');
+		expect(result?.[1]).toBe('Resume');
 	});
 
 	test('should match several patterns', () => {
 		const regexp = getRegExp(patterns);
 		const text = 'My résume and your décor';
 		const result1 = regexp.exec(text);
-		expect(result1).toBeTruthy();
-		expect(result1[1]).toBe('résume');
+		expect(result1?.[1]).toBe('résume');
 		const result2 = regexp.exec(text);
-		expect(result2).toBeTruthy();
-		expect(result2[1]).toBe('décor');
+		expect(result2?.[1]).toBe('décor');
 	});
 });
 
