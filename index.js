@@ -1,6 +1,6 @@
-const fs = require('fs');
-const stripJsonComments = require('strip-json-comments');
-const matchCasing = require('match-casing');
+import fs from 'fs';
+import stripJsonComments from 'strip-json-comments';
+import { matchCasing } from 'match-casing';
 
 const DEFAULT_OPTIONS = {
 	words: [],
@@ -42,6 +42,8 @@ function reporter(context, options = {}) {
 					if (matched === replacement) {
 						continue;
 					}
+
+					console.log('🦀 replacement', replacement);
 
 					const index = match.index;
 					const range = [index, index + matched.length];

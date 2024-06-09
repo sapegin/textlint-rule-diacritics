@@ -1,6 +1,6 @@
 # textlint-rule-diacritics
 
-[![textlint fixable rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) [![Build Status](https://travis-ci.org/sapegin/textlint-rule-diacritics.svg)](https://travis-ci.org/sapegin/textlint-rule-diacritics) [![npm](https://img.shields.io/npm/v/textlint-rule-diacritics.svg)](https://www.npmjs.com/package/textlint-rule-diacritics)
+[![textlint fixable rule](https://img.shields.io/badge/textlint-fixable-green.svg?style=social)](https://textlint.github.io/) [![npm](https://img.shields.io/npm/v/textlint-rule-diacritics.svg)](https://www.npmjs.com/package/textlint-rule-diacritics) [![Node.js CI status](https://github.com/sapegin/textlint-rule-diacritics/workflows/Node.js%20CI/badge.svg)](https://github.com/sapegin/textlint-rule-diacritics/actions)
 
 [Textlint](https://github.com/textlint/textlint) rule to check and fix the correct usage of diacritics.
 
@@ -62,7 +62,7 @@ The change log can be found on the [Releases page](https://github.com/sapegin/te
 
 ## Contributing
 
-Everyone is welcome to contribute. Please take a moment to review the [contributing guidelines](Contributing.md).
+Bug fixes are welcome, but not new features. Please take a moment to review the [contributing guidelines](Contributing.md).
 
 ## Sponsoring
 

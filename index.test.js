@@ -1,23 +1,24 @@
-const TextLintTester = require('textlint-tester');
-const rule = require('./index');
+import { describe, test, expect } from 'vitest';
+import TextLintTester from 'textlint-tester';
+import rule from './index';
 
 const { getPattern, getPatterns, getRegExp, getCorrection } = rule.test;
 const tester = new TextLintTester();
 
 describe('getPattern', () => {
-	it('should replace all symbols from groups with corresponding regexp patterns', () => {
+	test('should replace all symbols from groups with corresponding regexp patterns', () => {
 		const result = getPattern('résumé');
 		expect(result).toBe('r[éèêëe]sum[éèêëe]');
 	});
 
-	it('should replace apostrophes with corresponding regexp patterns', () => {
+	test('should replace apostrophes with corresponding regexp patterns', () => {
 		const result = getPattern('d’état');
 		expect(result).toBe("d[’'][éèêëe]tat");
 	});
 });
 
 describe('getPatterns', () => {
-	it('should return an array of patterns', () => {
+	test('should return an array of patterns', () => {
 		const words = ['décor', 'résumé'];
 		const result = getPatterns(words);
 		expect(result).toHaveLength(words.length);
@@ -26,35 +27,35 @@ describe('getPatterns', () => {
 
 describe('getRegExp', () => {
 	const patterns = ['r[éèêëe]sum[éèêëe]', 'd[éèêëe]cor'];
-	it('should match a pattern as a full word', () => {
+	test('should match a pattern as a full word', () => {
 		const result = getRegExp(patterns).exec('My resume is good');
 		expect(result).toBeTruthy();
 		expect(result[1]).toBe('resume');
 	});
 
-	it('should not match a pattern only at the beginning of a word', () => {
+	test('should not match a pattern only at the beginning of a word', () => {
 		const result = getRegExp(patterns).exec('All resumes are terrible');
 		expect(result).toBeFalsy();
 	});
 
-	it('should not match a pattern in the middle of a word', () => {
+	test('should not match a pattern in the middle of a word', () => {
 		const result = getRegExp(patterns).exec('Foo undecorated bar');
 		expect(result).toBeFalsy();
 	});
 
-	it('should match a pattern if some marks are present', () => {
+	test('should match a pattern if some marks are present', () => {
 		const result = getRegExp(patterns).exec('My résume is good');
 		expect(result).toBeTruthy();
 		expect(result[1]).toBe('résume');
 	});
 
-	it('should match a pattern regardless of its case', () => {
+	test('should match a pattern regardless of its case', () => {
 		const result = getRegExp(patterns).exec('Resume is good');
 		expect(result).toBeTruthy();
 		expect(result[1]).toBe('Resume');
 	});
 
-	it('should match several patterns', () => {
+	test('should match several patterns', () => {
 		const regexp = getRegExp(patterns);
 		const text = 'My résume and your décor';
 		const result1 = regexp.exec(text);
@@ -69,22 +70,22 @@ describe('getRegExp', () => {
 describe('getCorrection', () => {
 	const words = ['crème fraîche', 'crêpe', 'crêpes', 'débutante'];
 
-	it('should return a correct word', () => {
+	test('should return a correct word', () => {
 		const result = getCorrection(words, 'crepe');
 		expect(result).toBe('crêpe');
 	});
 
-	it('should keep suffix', () => {
+	test('should keep suffix', () => {
 		const result = getCorrection(words, 'crepes');
 		expect(result).toBe('crêpes');
 	});
 
-	it('should keep original case', () => {
+	test('should keep original case', () => {
 		const result = getCorrection(words, 'Crepe');
 		expect(result).toBe('Crêpe');
 	});
 
-	it('should return false if match not found', () => {
+	test('should return false if match not found', () => {
 		const result = getCorrection(words, 'pizza');
 		expect(result).toBeFalsy();
 	});
