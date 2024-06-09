@@ -12,7 +12,6 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"type": "module",
 	"main": "out/index.js",
 	"files": [
 		"out",
