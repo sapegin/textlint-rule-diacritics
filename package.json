@@ -12,7 +12,8 @@
 	"engines": {
 		"node": ">=20"
 	},
-	"main": "out/index.js",
+	"type": "module",
+	"exports": "./out/index.js",
 	"files": [
 		"out",
 		"words.json"
@@ -59,6 +60,9 @@
 	"dependencies": {
 		"match-casing": "^2.0.1",
 		"strip-json-comments": "^5.0.1"
+	},
+	"peerDependencies": {
+		"textlint": ">=13"
 	},
 	"lint-staged": {
 		"*.{js,md,json}": [
