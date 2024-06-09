@@ -28,6 +28,7 @@
 		"test:watch": "vitest",
 		"build": "tsc",
 		"format": "prettier --write \"**/*.{js,md,json}\"",
+		"prepublish": "npm run build",
 		"prepare": "husky"
 	},
 	"keywords": [
