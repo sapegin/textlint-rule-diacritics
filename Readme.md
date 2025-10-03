@@ -15,6 +15,8 @@ For example:
 
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/2U143Z0i3p3G0i1Q0i1D/textlint-rule-diacritics.png)
 
+[![Washing your code. A book on clean code for frontend developers](https://sapegin.me/images/washing-code-github.jpg)](https://sapegin.me/book/)
+
 ## Installation
 
 ```shell
