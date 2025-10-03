@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from 'node:fs';
 import { createRequire } from 'node:module';
 import stripJsonComments from 'strip-json-comments';
 import { matchCasing } from 'match-casing';
@@ -56,8 +56,8 @@ function getWords(words: string | string[] = []) {
 export function getPattern(word: string) {
 	return MARK_GROUPS.reduce((pattern, group) => {
 		// Strip the last character which is a character without diacritic mark
-		const groupPattern = `[${group.substring(0, group.length - 1)}]`;
-		return pattern.replace(new RegExp(groupPattern, 'ig'), `[${group}]`);
+		const groupPattern = `[${group.slice(0, Math.max(0, group.length - 1))}]`;
+		return pattern.replaceAll(new RegExp(groupPattern, 'ig'), `[${group}]`);
 	}, word);
 }
 
